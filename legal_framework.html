@@ -175,6 +175,45 @@ The search results for SP 11516 are reproduced below. The PHMSA database was sea
 <li>Criminal exposure: a knowing violation that results in serious injury or death may carry criminal penalties under 49 U.S.C. 5124 (up to 5 years imprisonment, or 10 years if the violation involves the release of hazardous material that results in death or bodily injury).</li>
 </ul>
 
+
+<h2 id="track-sp21607">Track 7, Direct Amazon culpability under DOT-SP 21607</h2>
+<p>The cleanest leverage point in this matter. Two of the 27 ASINs simultaneously print Amazon's federal special permit number on cans containing a federally banned substance, with Amazon as the actual transporter in US commerce.</p>
+
+<h3>The relevant facts</h3>
+<p>Per the PHMSA Special Permits Search (May 2026), DOT-SP 21607 has only four authorized entities:</p>
+<table>
+<tr><th>Tracking Number</th><th>Company</th><th>City, State</th><th>Granted</th><th>Expires</th></tr>
+<tr><td>2025054152</td><td>Amazon.com, Inc.</td><td>Seattle, WA</td><td>06/23/2025</td><td>05/31/2029</td></tr>
+<tr><td>2025075004</td><td>Amazon.com, Inc.</td><td>Seattle, WA</td><td>08/14/2025</td><td>05/31/2029</td></tr>
+<tr><td>2025085560</td><td>Maersk Logistics & Services USA Inc.</td><td>Florham Park, NJ</td><td>08/26/2025</td><td>07/31/2027</td></tr>
+<tr><td>2025085567</td><td>ID Logistics Warehousing, LLC</td><td>Salt Lake City, UT</td><td>09/05/2025</td><td>07/31/2027</td></tr>
+</table>
+<p>None of the Chinese sellers in this matter are authorized under SP 21607. SP 21607 is a US-domestic logistics permit covering Amazon FBA hazmat fulfillment and authorized contract carriers (Maersk, ID Logistics).</p>
+<p>The screenshot of the PHMSA SP 21607 search results is in the <a href="screenshots/permit/index.html">permit screenshots folder</a>.</p>
+
+<h3>Two ASINs document the simultaneous violation</h3>
+<table>
+<tr><th>ASIN</th><th>What the can label states</th></tr>
+<tr><td><a href="briefs/B0D97CRVM2.html"><code>B0D97CRVM2</code></a></td><td>"CONTAINS: 1,1,1,2-TETRAFLUOROETHANE" (R-134a, banned January 1, 2025) AND "DOT-SP 21607" on the same label.</td></tr>
+<tr><td><a href="briefs/B0F62YLXK6.html"><code>B0F62YLXK6</code></a></td><td>"CONTAINS: 1,1,1,2-TETRAFLUOROETHANE" (R-134a) AND "DOT-SP 21607" on the same label.</td></tr>
+</table>
+<p>Both ASINs are sold by NUOVEPE-Direct (Shenzhen, China). Both flow through Amazon FBA. Two additional ASINs (<a href="briefs/B0DT91W8NL.html"><code>B0DT91W8NL</code></a> and <a href="briefs/B0FFGQWXHG.html"><code>B0FFGQWXHG</code></a>) bear DOT-SP 21607 markings but conceal the refrigerant identity on the can; the AIM Act conformance for those two cannot be confirmed from the cans alone, though the seller patterns and FBA fulfillment match.</p>
+
+<h3>Why this exposes Amazon to direct PHMSA enforcement</h3>
+<div class="regulation">
+49 CFR 171.2(f): "No person may transport a hazardous material in commerce unless the hazardous material is transported in accordance with applicable requirements of this subchapter, or an exemption or special permit, approval, or registration issued under this subchapter or subchapter A of this chapter. Each carrier who transports a hazardous material in commerce may rely on information provided by the offeror of the hazardous material or a prior carrier, unless the carrier knows or, a reasonable person, acting in the circumstances and exercising reasonable care, would have knowledge that the information provided by the offeror or prior carrier is incorrect."
+</div>
+<p>Amazon, as a SP 21607 grantee, is the federally authorized transporter of these packages in US commerce. The Chinese seller's printing of SP 21607 on the can effectively claims Amazon's permit authority. When Amazon then fulfills the order through FBA, Amazon is the entity physically transporting the package under their own permit number.</p>
+<p>Amazon's reasonable-carrier reliance defense under 49 CFR 171.2(f) applies only until Amazon has actual or constructive knowledge that the shipment contains a federally prohibited substance. <strong>This filing constitutes that notice.</strong> Once Amazon has notice that specific ASINs in their FBA program contain R-134a (federally banned in aerosols since January 1, 2025) and are marked with Amazon's own SP 21607 permit, continued FBA fulfillment is no longer covered by the reliance defense. Amazon is then knowingly transporting non-compliant hazmat under their own federal authorization.</p>
+<p>Civil penalties under 49 CFR 107.329 (2025 inflation-adjusted figures) for knowing violations: up to $102,348 per violation per day, or up to $238,809 per violation per day if injury or substantial property destruction results. Each day of continuing violation constitutes a separate offense.</p>
+
+<h3>Supporting precedent</h3>
+<p>In March 2026, the Washington State Department of Ecology obtained civil penalties against Amazon and Walmart for selling banned refrigerants through their platforms. (Reference: <a href="https://washingtonstatestandard.com/briefs/amazon-and-walmart-fined-for-selling-banned-refrigerant-in-wa/">Washington State Standard, March 2026</a>.) Federal enforcement under PHMSA jurisdiction is more direct because Amazon is the actual federally-authorized transporter, not merely the seller of record.</p>
+
+<h3>Practical implication for the takedown</h3>
+<p>This argument repositions the matter from "please remove these listings" to "Amazon, you have direct federal exposure on these specific ASINs and need to act to limit it." Amazon's incentive to act fast is now grounded in its own liability rather than in cooperation with the complainant. Prior submissions through Amazon's standard hazmat reporting channel were ineffective; this filing should be directed to Amazon's legal department or hazmat compliance team with explicit reference to 49 CFR 171.2(f).</p>
+
+
 <h2 id="track-fifra">Track 5, FIFRA, unregistered pesticidal claims (7 U.S.C. 136 et seq.)</h2>
 <p>The Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) regulates products that make claims to repel, deter, kill, or otherwise act on pests, including animals such as bears, coyotes, and dogs. Any product making such claims must be registered with the EPA and bear an EPA Establishment Number.</p>
 <p>The violation: 25 of 27 ASINs in this matter make pesticidal claims (bear deterrent, dog deterrent, scare wildlife, stops barking, pet trainer to stop dog attacking, and similar) without an EPA Establishment Number visible in the listing or on the packaging. The Amazon listings themselves carry the violation, regardless of can contents.</p>
@@ -190,6 +229,7 @@ The search results for SP 11516 are reproduced below. The PHMSA database was sea
 <tr><td>EPA AIM Act, HFC ban (aerosols, GWP greater than 150)</td><td>42 U.S.C. 7675; 40 CFR Part 84 Subpart B; 88 FR 73098 (October 24, 2023)</td><td>15 ASINs explicitly contain R 134a (GWP 1,430). 6 ASINs have post 1/1/2025 MFG dates printed on product.</td></tr>
 <tr><td>DOT Special Permit authorization structure</td><td>49 CFR Part 107 Subpart B; 49 CFR 107.107</td><td>9 ASINs print "DOT SP 11516", PHMSA database confirms none of these sellers are Grantee or Party To.</td></tr>
 <tr><td>False marking and misrepresentation of hazmat compliance</td><td>49 CFR 171.2(g), (h), (j); 49 CFR 172.301(c)</td><td>Same 9 ASINs, false representation of compliance with permit they don't hold, on substances the permit doesn't authorize.</td></tr>
+<tr><td>Amazon's direct culpability as transporter under SP 21607</td><td>49 CFR 171.2(f); 49 CFR 107.329</td><td>2 ASINs (B0D97CRVM2, B0F62YLXK6) simultaneously mark Amazon's SP 21607 and contain R-134a. After notice, Amazon's reasonable-carrier reliance defense fails; continued FBA fulfillment exposes Amazon to direct PHMSA enforcement.</td></tr>
 <tr><td>FIFRA, unregistered pesticidal claims</td><td>7 U.S.C. 136 et seq.</td><td>25 of 27 ASINs make pesticidal claims (bear deterrent, dog deterrent, etc.) without an EPA Establishment Number.</td></tr>
 <tr><td>Civil penalties (federal)</td><td>49 CFR 107.329 (2025 inflation adjusted figures)</td><td>Up to $102,348 per violation per day, or $238,809 if injury or property damage. Each day equals a separate offense.</td></tr>
 </table>
