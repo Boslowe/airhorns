@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Access Required</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #1a3a5c; color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0; padding: 20px; }
+.box { background: white; color: #222; padding: 40px 48px; border-radius: 8px; max-width: 440px; width: 100%; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+h1 { color: #1a3a5c; margin-top: 0; font-size: 1.5em; }
+input { width: 100%; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; margin: 8px 0; box-sizing: border-box; }
+button { width: 100%; background: #1a3a5c; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+button:hover { background: #2c5282; }
+.error { color: #c62828; margin-top: 12px; font-size: 0.9em; display: none; }
+.note { font-size: 0.85em; color: #666; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Access Required</h1>
+<p>This site contains evidence documentation for a legal enforcement matter. Please enter the access password.</p>
+<form id="gate">
+<input type="password" id="pw" placeholder="Password" autofocus autocomplete="off">
+<button type="submit">Enter</button>
+</form>
+<div class="error" id="err">Incorrect password.</div>
+<div class="note">If you do not have the password, please contact the party who shared this link with you.</div>
+</div>
+<script>
+const TARGET = "e281cc4089456fd9ac3020d10e0e3f745bcae7e8743ecb22344b0f0dbf9f711d";
+async function sha256(s) { const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+if (sessionStorage.getItem('auth') === TARGET) { location.href = 'home.html';
+}
+document.getElementById('gate').addEventListener('submit', async (e) => { e.preventDefault(); const pw = document.getElementById('pw').value; const h = await sha256(pw); if (h === TARGET) { sessionStorage.setItem('auth', TARGET); location.href = 'home.html'; } else { document.getElementById('err').style.display = 'block'; }
+});
+</script>
+</body>
+</html>
